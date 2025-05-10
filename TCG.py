@@ -1,41 +1,6 @@
 from tkinter import *
 
-class Stack:    
-    
-    def __init__(self,max_lim):
-        self.__lis_of_eles=[]
-        self.__max_lim=max_lim
-        self.__top=-1
 
-    def get_stack_eles(self):
-        return self.__lis_of_eles
-        
-
-    def is_full(self):
-        if(self.__top==self.__max_lim-1):
-            return True
-        else:
-            return False
-
-    def is_empty(self):
-        if(self.__top==-1):
-            return True
-        else:
-            return False
-
-    def push(self,E):
-        if(self.is_full()):
-            print("Stack is full")
-            return 
-        else:
-            self.__top+=1
-            self.__lis_of_eles.insert(self.__top,E)
-            #print("Pushed ele: ",self.__lis_of_eles[self.__top])
-            
-    def pop(self):
-        if(self.is_empty()):
-            print("Stack is empty")
-            return
         else:
             del_ele=self.__lis_of_eles.pop(self.__top)
             #print("Deleted element: ",del_ele)            
@@ -125,25 +90,7 @@ class Equation:
                     if(self.is_operator(ele)):
                         s.push(ele)
                         
-                    else:
-                        return False
-                    
-                elif(self.is_operator(stack_elements[top_pos])):
-                    if(self.is_operand(ele)):
-                        s.push(ele)
-                        self.__c+=1
-                    else:
-                        
-                        return False
-                else:
-                    
-                    return False
-
-        
-        return True     
-
-    
-class ThreeAddressCodeGenerator(Equation):
+          Equation):
     
     def __init__(self,eqn):
         super().__init__(eqn)
